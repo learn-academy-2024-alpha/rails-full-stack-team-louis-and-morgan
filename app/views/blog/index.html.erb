@@ -1,8 +1,4 @@
-<h1>Test</h1>
 <p><% @blogs.each do |blog| %></p>
-  <p><%= blog.title %></p>
-  <p><%= blog.content %></p>
-
   <ul>
   <li><%= link_to blog.title, blog_path(blog) %> </li>
   </ul>
