@@ -46,19 +46,21 @@ Branch: blog-create
 
 Acceptance Criteria
 
-Has a controller action for create
-Has a route for create
-Can fill out a form for a new blog post and click on a submit button that will trigger a create action
-Can be rerouted to the landing page when a valid blog post is created
+Has a controller action for create✅
+Has a route for create✅
+Can fill out a form for a new blog post and click on a submit button that will trigger a create action✅
+Can be rerouted to the landing page when a valid blog post is created✅
+
 🏔 Stretch Goals
+
 Story 5: In order to interact with the blog post application, as a user of the application, I need to delete a new blog post.
 
 Branch: blog-delete
 
 Acceptance Criteria
 
-Has a controller action for delete
-Has a route for delete
+Has a controller action for delete✅
+Has a route for delete✅
 Can see a button on the show page to delete the blog post
 Can click on the button to perform a delete action
 Can be rerouted to the landing page when a blog post is deleted
