@@ -61,22 +61,23 @@ Acceptance Criteria
 
 Has a controller action for delete✅
 Has a route for delete✅
-Can see a button on the show page to delete the blog post
-Can click on the button to perform a delete action
-Can be rerouted to the landing page when a blog post is deleted
+Can see a button on the show page to delete the blog post✅
+Can click on the button to perform a delete action✅
+Can be rerouted to the landing page when a blog post is deleted✅
 Story 6: In order to interact with the blog post application, as a user of the application, I need to see a form where I can fill out information to edit an existing blog post.
 
 Branch: blog-edit
 
 Acceptance Criteria
 
-Has a controller action for edit
-Has a route for edit
-Has a view for edit
-Can navigate from the show page of one blog post to the view of the edit page
-Can see a form to edit title and content
-Can see a submit button
-Can navigate back from the edit page to the blog post show page
+Has a controller action for edit✅
+Has a route for edit✅
+Has a view for edit✅
+Can navigate from the show page of one blog post to the view of the edit page✅
+Can see a form to edit title and content✅
+Can see a submit button✅
+Can navigate back from the edit page to the blog post show page✅
+
 Story 7: In order to interact with the blog post application, as a user of the application, I need to update an existing blog post.
 
 Branch: blog-update

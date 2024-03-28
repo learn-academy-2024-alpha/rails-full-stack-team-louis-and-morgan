@@ -1,0 +1,11 @@
+<%= form_with model: @blog do |form| %>
+  <%= form.label :title, 'Edit Blog Title' %>
+    <%= form.text_field :title %>
+    <br />
+    <br />
+    <%= form.label :content, 'Edit Blog Content' %>
+    <%= form.text_area :content, size: "60x10" %>
+    <%= form.submit 'Edit New Post' %>
+    <% end %>
+    <p> <%= link_to 'home', blogs_path %></p>
+
