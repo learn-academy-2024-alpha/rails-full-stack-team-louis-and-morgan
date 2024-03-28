@@ -11,7 +11,7 @@ class BlogController < ApplicationController
     @blog = Blog.new
   end
 
-  def create 
+  def create
     @blog = Blog.create(blog_params)
     if @blog.valid?
       redirect_to blogs_path
@@ -20,6 +20,10 @@ class BlogController < ApplicationController
 
   def blog_params
     params.require(:blog).permit(:title, :content)
+  end
+
+  def edit
+    @blog = Blog.find(params[:id])
   end
 
   def destroy
