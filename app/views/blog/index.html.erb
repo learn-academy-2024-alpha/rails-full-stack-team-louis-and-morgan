@@ -1,7 +1,43 @@
-<p><% @blogs.each do |blog| %></p>
-  <ul>
-  <li><%= link_to blog.title, blog_path(blog) %> </li>
-  </ul>
-  <% end %>
-
-  <p><%= link_to 'Create New Blog Post', blog_new_path %> </p>
+<div class='index-wrapper'>
+  <div class='index-cont'>
+    <nav class="navbar-expand-lg" style="position: sticky; top: 0; z-index: 100;">
+      <div class="container-fluid gap-4 sub-nav" style="display: flex; flex-direction: row; height: 80px">
+        <a class="nav-font" href="#" style="display: flex; align-items: center; font-size: 30px; margin-left: 20px;">Blog</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav" style="display: flex; justify-content: end;">
+        <button class='create-blog-btn'><%= link_to 'Create New Blog Post', blog_new_path, class: 'nav-font' %></button>
+          <ul class="navbar-nav gap-4" style="margin-left: 20px; margin-right: 20px;">
+            <li class="nav-item">
+              <a class="nav-font active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-font" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-font" href="#">Pricing</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class='hero'>
+      <h1>Blog</h1>
+      <p style="color: #9999">Our latest articles and resources</p>
+    </div>
+    <div class='blog-cont-2'>
+      <div class='blog-links-cont'>
+        <% @blogs.each_with_index do |blog, index| %>
+          <ul>
+            <% image_path = @blog_image_paths[index % @blog_image_paths.length] %>
+            <a href="<%= blog_path(blog) %>">
+              <img class="blog-imgs" src="<%= asset_path(image_path) %>" alt="Blog Image">
+            </a>
+            <li><%= link_to blog.title, blog_path(blog), class: 'index-font' %></li>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
