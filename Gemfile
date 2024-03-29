@@ -62,3 +62,8 @@ end
 
 
 gem "rspec-rails", "~> 6.1"
+
+gem 'bootstrap', '~> 5.3.0'
+
+gem 'sassc-rails', '~> 2.0'
+

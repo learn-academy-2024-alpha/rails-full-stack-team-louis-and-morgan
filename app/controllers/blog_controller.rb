@@ -1,5 +1,12 @@
 class BlogController < ApplicationController
   def index
+    @blog_image_paths = [
+      'computer.jpg',
+      'code.jpg',
+      'coffee.jpg',
+      'plant.jpg',
+    ]
+
     @blogs = Blog.all
   end
 
@@ -9,6 +16,12 @@ class BlogController < ApplicationController
 
   def new
     @blog = Blog.new
+  end
+
+  def fetch_image_paths
+    image_paths = params[:image_paths] # Access the image paths sent in the AJAX request
+    @blog_image_paths = image_paths
+    render json: { status: 'success' }
   end
 
   def create

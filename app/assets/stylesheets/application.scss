@@ -1,0 +1,96 @@
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@mixin wrapper() {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 40px;
+}
+
+@mixin centered() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.index-wrapper {
+  @include wrapper();
+  @include centered();
+  background-color: #F54021;
+  font-family: "Montserrat", sans-serif;
+  .index-cont {
+    width: 100%;
+    max-height: 100%;
+    background-color: #FFF1EF;
+    overflow-y: scroll;
+  }
+  li {
+    list-style: none;
+  }
+  nav {
+    background-color: #4C0E02;
+    color: #fff;
+  }
+}
+
+.hero {
+  @include centered();
+  flex-direction: column;
+  margin: 50px 0px;
+}
+
+.index-font {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-font {
+  text-decoration: none;
+  color: #fff;
+}
+
+.create-blog-btn {
+  border: none;
+  border-radius: 5px;
+  background-color: #F54021;
+  height: 50%;
+  padding: 15px;
+  @include centered();
+  &:hover {
+    opacity: 50%;
+  }
+}
+
+.blog-cont-2 {
+  display: flex;
+  justify-content: center;
+  .blog-links-cont {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 50%;
+  }
+}
+
+.blog-links-cont {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 50%;
+}
+
+.blog-imgs {
+  height: 100px;
+}
+
+.sub-nav {
+  padding: 0px 20px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+
